@@ -7,6 +7,13 @@
 
 
 /* betty style doc for function main goes there */
+/**
+ * main - check if a number is > or < or =
+ * Description: This function check if number is
+ * greater or less than 0 or equal to 0
+ * it print is positive or is negative or is zero.
+ * Return: it return nothing void
+ */
 
 int main(void)
 {
