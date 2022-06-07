@@ -1,14 +1,12 @@
-#include <stdio.h>
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 /**
- * _putchar - use putchar to print char
- * @alpha: alpha is the char passed into the func
+ * _putchar - write character to stdout
+ * @c: the character to print
  * Return: Always 0 (success)
  */
 
-int _putchar(char alpha)
-{
-	putchar(alpha);
+int _putchar(char c);
 
-	return (0);
-}
+#endif
