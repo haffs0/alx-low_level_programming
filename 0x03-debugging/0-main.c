@@ -7,14 +7,18 @@
 
 int main(void)
 {
-        int i;
+	int i, j;
 
-        i = 98;
-	
-	if (i == 0)
-		printf("0 is zero");
-	else	
-        	positive_or_negative(i);
+	j = positive_or_negative(i);
 
-        return (0);
+	if (j == 0)
+	{
+		printf("%i is zero", j);
+	}
+	else
+	{
+		printf("%i", j);
+	}
+
+	return (0);
 }
