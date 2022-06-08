@@ -35,4 +35,10 @@ int _islower(int c);
 
 int _isalpha(int c);
 
+/**
+ * print_sign - print + if number > 0, 0 if number = 0 and - number < 0
+ */
+
+int print_sign(int n);
+
 #endif
