@@ -7,18 +7,11 @@
 
 int main(void)
 {
-	int i = 0, j;
+	int i;
 
-	j = positive_or_negative(i);
+	i = 0;
 
-	if (j == 0)
-	{
-		printf("%i is zero", j);
-	}
-	else
-	{
-		printf("%i", j);
-	}
+	positive_or_negative(i);
 
 	return (0);
 }
