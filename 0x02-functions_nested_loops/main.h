@@ -23,5 +23,16 @@ void print_alphabet(void);
 
 void print_alphabet_x10(void);
 
+/**
+ *_islower - print 1 if is lowercase else 0
+ */
+
+int _islower(int c);
+
+/**
+ * _isalpha - print 1 if it is alphabet else 0
+ */
+
+int _isalpha(int c);
 
 #endif
