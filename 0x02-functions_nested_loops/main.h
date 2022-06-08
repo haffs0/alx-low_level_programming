@@ -41,4 +41,31 @@ int _isalpha(int c);
 
 int print_sign(int n);
 
+
+/**
+ * _abs - print positive integer
+ */
+
+int _abs(int);
+
+/**
+ * print_last_digit - print remainder of a number
+ */
+
+int print_last_digit(int);
+
+
+/**
+ * jack_bauer - print minute 00:00 to 23:59
+ */
+
+void jack_bauer(void);
+
+
+/**
+ * times_table - print times table
+ */
+
+void times_table(void);
+
 #endif
