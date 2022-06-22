@@ -10,16 +10,19 @@
 
 int _sqrt_recursion(int n)
 {
-	int sqr;
+	int start, end, mid;
 
-	sqr = sqrt(n);
+	start = 0;
+	end = n;
+	mid = (start + end) / 2;
 
-	if ((n % sqr) != 0)
+	if ((mid * mid) == n)
 	{
-		return (-1);
+		return (mid);
 	}
-	else
+	else if ((mid * mid) < n)
 	{
-		return (sqr);
+		return (_sqrt_recursion(mid));
 	}
+	return (_sqrt_recursion(mid - 1));
 }
