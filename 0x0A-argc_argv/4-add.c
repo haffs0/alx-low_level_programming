@@ -11,7 +11,7 @@
 
 int main(int argc, char **argv)
 {
-	int count, add = 0, zero = 0;
+	int count, add = 0;
 
 	if (argc > 1)
 	{
@@ -27,10 +27,6 @@ int main(int argc, char **argv)
 				add += atoi(argv[count]);
 			}
 		}
-	}
-	else
-	{
-		printf("%i\n", zero);
 	}
 	printf("%i\n", add);
 
