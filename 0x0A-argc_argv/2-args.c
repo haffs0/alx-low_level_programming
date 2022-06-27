@@ -10,13 +10,14 @@
 
 int main(int argc, char **argv)
 {
-        int count, output = 0;
+	int count;
 
-	for (count = 0; count < argc; count++)
+	if (argv[0])
 	{
-		output += 1;
+		for (count = 0; count < argc; count++)
+		{
+			printf("%s\n", argv[count]);
+		}
 	}
-	printf("%d\n", output);
-
-        return (0);
+	return (0);
 }

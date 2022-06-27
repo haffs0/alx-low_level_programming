@@ -10,13 +10,22 @@
 
 int main(int argc, char **argv)
 {
-        int count, output = 0;
+	int count, mul = 1;
 
-	for (count = 0; count < argc; count++)
+	if (argc > 1)
 	{
-		output += 1;
+		for (count = 1; count < argc; count++)
+		{
+			mul *= atoi(argv[count]);
+		}
 	}
-	printf("%d\n", output);
+	else
+	{
+		printf("Error\n");
 
-        return (0);
+		return (1);
+	}
+	printf("%i\n", mul);
+
+	return (0);
 }
