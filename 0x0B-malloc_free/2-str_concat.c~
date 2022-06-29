@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * str_concat - add two strings togther
+ * @s1: string to be add to
+ * @s2: second string
+ * Return: a string
+ */
+
+
+char *str_concat(char *s1, char *s2)
+{
+	char *s, *empty = " ";
+	int i, m, n;
+
+	if (s1 == NULL)
+	{
+		*(s1 + 0) = *empty;
+	}
+	else if (s2 == NULL)
+	{
+		*(s2 + 0) = *empty;
+	}
+
+	m = (int) strlen(s1) + 1;
+	n = (int) strlen(s2) + 1;
+
+	s = malloc(sizeof(char) * (m + n));
+
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		s = s1;
+
+		for (i = 0; *(s2 + i) != '\0'; i++)
+		{
+			*(s + (m + i)) = *(s2 + i);
+		}
+	}
+	return (s);
+}
