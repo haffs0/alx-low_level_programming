@@ -7,25 +7,26 @@
 
 int main(void)
 {
-	int n = '0';
+	int i;
+	int j;
 
-	while (n <= '89')
+	for (i = 10; i <= 19; i++)
 	{
-		if (n <= '9')
+		for (j = 10; j <= 19; j++)
 		{
-			putchar('0');
-		}
-		putchar(n);
-		if (n != 89)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+			if ((j % 10) > (i % 10))
+			{
+				putchar((i % 10) + '0');
+				putchar((j % 10) + '0');
+				if (i != 18 || j != 19)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 
-		n++;
+		}
 	}
-
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }
