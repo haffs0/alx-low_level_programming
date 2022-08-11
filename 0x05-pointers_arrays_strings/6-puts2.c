@@ -10,22 +10,13 @@
 
 void puts2(char *str)
 {
-	int i, length_of_string;
+	int index = 0, len = 0;
 
-	length_of_string = strlen(str);
-	for (i = 0; i < length_of_string; i++)
-	{
-		if (i == 0)
-		{
-			_putchar(str[i]);
-		}
-		else if ( i > 1)
-		{
-			if (i % 2 == 0)
-			{
-				_putchar(str[i]);
-			}
-		}
-	}
+	while (str[index++])
+		len++;
+
+	for (index = 0; index < len; index += 2)
+		_putchar(str[index]);
+
 	_putchar('\n');
 }
