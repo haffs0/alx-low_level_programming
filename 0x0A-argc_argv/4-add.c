@@ -1,5 +1,5 @@
 #include "main.h"
-#include <ctype.h>
+#include <stdlib.h>
 
 /**
  * main - print the argument passed to the command line
@@ -9,26 +9,25 @@
  */
 
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int count, add = 0;
+	int num, digit, sum = 0;
 
-	if (argc > 1)
+	for (num = 1; num < argc; num++)
 	{
-		for (count = 1; count < argc; count++)
+		for (digit = 0; argv[num][digit]; digit++)
 		{
-			if (isdigit(*argv[count]) == 0)
+			if (argv[num][digit] < '0' || argv[num][digit] > '9')
 			{
-				printf("Error \n");
+				printf("Error\n");
 				return (1);
 			}
-			else
-			{
-				add += atoi(argv[count]);
-			}
 		}
+
+		sum += atoi(argv[num]);
 	}
-	printf("%i\n", add);
+
+	printf("%d\n", sum);
 
 	return (0);
 }
