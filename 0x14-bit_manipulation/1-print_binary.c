@@ -1,37 +1,25 @@
 #include "main.h"
+
 /**
- * print_binary - print binary
- * @n: integer to mess with
+ * print_binary - prints a binary number using bit shifting and masks
+ * @n: number to print
+ *
+ * Return: always void
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int i = 1;
+	unsigned int mask = 32768; /* 1000 0000 0000 0000 */
+	char hit_rel_flag = 0;
 
-	i <<= ((sizeof(i) * 8) - 1);
-	if (n == 1)
+	while (mask > 0)
 	{
-		_putchar('1');
-		return;
-	}
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-		}
-	while (i > 0)
-	{
-		if ((i & n) == 0)
-			i = i >> 1;
-		else
-			break;
-	}
-	while (i > 0)
-	{
-		if ((i & n) == 0)
+		if ((n & mask) == 0 && (hit_rel_flag || mask == 0x01))
 			_putchar('0');
-		else
+		else if ((n & mask) != 0)
+		{
 			_putchar('1');
-		i = i >> 1;
+			hit_rel_flag = 1;
+		}
+		mask = mask >> 1;
 	}
-
 }
