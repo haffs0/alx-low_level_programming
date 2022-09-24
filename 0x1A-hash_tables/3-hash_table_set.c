@@ -12,9 +12,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	char *value_copy;
 	unsigned long int index, i;
 
-	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+	if (ht == NULL || !ht->size || !strlen(key))
 		return (0);
-	value_copy = strdup(value);
+	value_copy = strdup((char *)value);
 	if (value_copy == NULL)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
@@ -33,7 +33,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(value_copy);
 		return (0);
 	}
-	node->key = strdup(key);
+	node->key = strdup((char *)key);
 	if (node->key == NULL)
 	{
 		free(node);
