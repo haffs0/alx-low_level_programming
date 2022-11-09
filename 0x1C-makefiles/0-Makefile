@@ -1,0 +1,9 @@
+CC = gcc
+CFLAGS = -g -Wall
+DEPS = m.h
+TARGET = school
+all: $(TARGET)
+$(TARGET): $(TARGET).c $(DEPS)
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TARGET).c
+clean:
+	$(RM) $(TARGET)
